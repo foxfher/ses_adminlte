@@ -1,4 +1,4 @@
-# amksite
+# ses_adminlte
  
 Installing necessary files for the AdminLTE template
 
