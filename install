@@ -1,0 +1,27 @@
+#!/bin/bash  
+#
+# -----------------------------------------------------------------------
+# ::::      Installing necessary files for the AdminLTE template     ::::
+# ::::           https://github.com/foxfher/ses_adminlte.git         ::::
+# ::::      (c) 2019 Fernando Bello Mota <fbello04@hotmail.com>      ::::
+# -----------------------------------------------------------------------
+#
+
+
+echo "-----------------------------------------------------------------------"
+echo "::::      Installing necessary files for the AdminLTE template     ::::"
+echo "::::           https://github.com/foxfher/ses_adminlte.git         ::::"
+echo "::::      (c) 2019 Fernando Bello Mota <fbello04@hotmail.com>      ::::"
+echo "-----------------------------------------------------------------------"
+echo ":::: Clonando AdminLTE ::::"
+git clone https://github.com/foxfher/ses_adminlte.git
+git clone -b v3-dev https://github.com/ColorlibHQ/AdminLTE.git
+cd AdminLTE
+npm install
+cd ..
+echo ":::: Obteniendo archivos necesarios ::::"
+node ses_adminlte/npm/InstallPublish.js -v
+perl -pi -e "s[~bootstrap/scss/][bootstrap/]g" src/scss/AdminLTE.scss
+echo ":::: Eliminando AdminLTE ::::"
+rm -rf AdminLTE
+rm -rf ses_adminlte
