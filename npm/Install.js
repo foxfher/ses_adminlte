@@ -7,7 +7,7 @@ const Plugins = [
 },
 {
   from: 'build/js',
-  to  : '../src/js/base/core'
+  to  : '../src/js/base/core/core'
 },
   // bootstrap
   {
