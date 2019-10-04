@@ -14,15 +14,14 @@ echo "::::           https://github.com/foxfher/ses_adminlte.git         ::::"
 echo "::::      (c) 2019 Fernando Bello Mota <fbello04@hotmail.com>      ::::"
 echo "-----------------------------------------------------------------------"
 echo ":::: Clonando AdminLTE ::::"
-git clone https://github.com/foxfher/ses_adminlte.git
 git clone -b v3-dev https://github.com/ColorlibHQ/AdminLTE.git
 cd AdminLTE
-npm install
-npm i fs-extra
-cd ..
+git clone https://github.com/foxfher/ses_adminlte.git
+npm install   
 echo ":::: Obteniendo archivos necesarios ::::"
 node ses_adminlte/npm/InstallPublish.js -v
+cd ..
 perl -pi -e "s[~bootstrap/scss/][bootstrap/]g" src/scss/AdminLTE.scss
 echo ":::: Eliminando AdminLTE ::::"
 rm -rf AdminLTE
-rm -rf ses_adminlte
+#rm -rf ses_adminlte

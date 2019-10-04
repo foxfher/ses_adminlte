@@ -2,7 +2,7 @@ const Plugins = require('./Install')
 const fse     = require('fs-extra')
 
 class Publish {
-  constructor() {
+  constructor() { 
     this.options = {
       verbose: false
     }
