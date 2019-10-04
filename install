@@ -18,6 +18,7 @@ git clone https://github.com/foxfher/ses_adminlte.git
 git clone -b v3-dev https://github.com/ColorlibHQ/AdminLTE.git
 cd AdminLTE
 npm install
+npm i fs-extra
 cd ..
 echo ":::: Obteniendo archivos necesarios ::::"
 node ses_adminlte/npm/InstallPublish.js -v
