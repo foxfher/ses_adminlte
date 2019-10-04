@@ -23,6 +23,7 @@ node ses_adminlte/npm/InstallPublish.js -v
 cd ..
 perl -pi -e "s[~bootstrap/scss/][bootstrap/]g" src/scss/AdminLTE.scss
 mv  src/js/base/core/core/AdminLTE.js src/js/base/core/AdminLTE.js
+perl -pi -e "s[./][./core/" src/js/base/core/AdminLTE.js
 echo ":::: Eliminando AdminLTE ::::"
 rm -rf AdminLTE
 #rm -rf ses_adminlte
