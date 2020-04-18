@@ -14,7 +14,7 @@ echo "::::           https://github.com/foxfher/ses_adminlte.git         ::::"
 echo "::::      (c) 2019 Fernando Bello Mota <fbello04@hotmail.com>      ::::"
 echo "-----------------------------------------------------------------------"
 echo ":::: Clonando AdminLTE ::::"
-git clone -b v3-dev https://github.com/ColorlibHQ/AdminLTE.git
+git clone -b master https://github.com/ColorlibHQ/AdminLTE.git
 cd AdminLTE
 git clone https://github.com/foxfher/ses_adminlte.git
 npm install   
